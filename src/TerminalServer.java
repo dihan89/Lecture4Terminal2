@@ -60,6 +60,10 @@ public class TerminalServer implements TerminalBank{
             try {
                 if (System.currentTimeMillis() - startTimePause < lockedTimeMs)
                     throw new AccountLockedException();
+                else {
+                    blocked = false;
+                    attemptNo = 0;
+                }
             } catch(AccountLockedException exc) {
                 System.out.println("Account is locked! Wait: " +
                         Math.max(1, Math.round((lockedTimeMs - (System.currentTimeMillis() - startTimePause)) * 0.001))
