@@ -77,7 +77,7 @@ public class TerminalServer implements TerminalBank{
         }
         else {
             attemptNo += 1;
-            if (attemptNo == nAttempts - 1){
+            if (attemptNo == nAttempts){
                 startTimePause = System.currentTimeMillis();
                 blocked = true;
                 System.out.println(" Is Locked! Wait 10 seconds! ");
