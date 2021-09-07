@@ -90,7 +90,7 @@ public class TerminalServer implements TerminalBank{
 
     TerminalServer(int [] password){
         this.password = password.clone();
-        System.out.println("Original password = " + Arrays.toString(this.password));
+       // System.out.println("Original password = " + Arrays.toString(this.password));
         balance = 0;
         attemptNo = 0;
         blocked = false;
